@@ -9,7 +9,7 @@ namespace Learn.ClockInMirror
             int hours = GetHours(time);
             int minutes = GetMinutes(time);
 
-            
+
             if (IsCenter(hours, minutes))
             {
                 return time;
@@ -17,60 +17,23 @@ namespace Learn.ClockInMirror
 
             int mirrorHours = 0;
             int mirrorMinutes = 0;
-            if (HourOnRight(hours, minutes) && !HaveMinutes(minutes))
-            {
-                mirrorHours = 12 - hours;
-                mirrorMinutes = 0;
-            }
 
-            if (HourOnLeft(hours, minutes) && !HaveMinutes(minutes))
-            {
-                mirrorMinutes = 0;
-                mirrorHours = 12 - hours;
-            }
 
-            if (HourOnRight(hours, minutes) && HaveMinutes(minutes))
-            {
-                mirrorHours = 12 - hours - 1;
-                mirrorMinutes = 60 - minutes;
-            }
 
-            if (HourOnLeft(hours, minutes) && HaveMinutes(minutes))
-            {
-                
-                mirrorMinutes = 60 - minutes;
-                if(hours == 11)
-                {
-                    mirrorHours = 12;
-                }
-                else
-                {
-                    if( minutes % 5 == 0)
-                    {
 
-                        mirrorHours = 12 - hours;
-                    }
-                    else
-                    {
-                        mirrorHours = 12 - hours - 1;
-                    }
-                }
-            }
+            mirrorHours = 12 - hours;
+            if (HaveMinutes(minutes))
+                mirrorHours -= 1;
+            mirrorHours = mirrorHours <= 0 ? mirrorHours + 12 : mirrorHours;
 
-            if (HourOnCenter(hours, minutes) && HaveMinutes(minutes))
-            {
-                
-                mirrorHours = hours -= 1;
-                mirrorMinutes = 60 - minutes;
-            }
-
+            mirrorMinutes = (60 - minutes) % 60;
 
             string mirrorTime = BuildMirrorTime(mirrorHours, mirrorMinutes);
 
             return mirrorTime;
         }
 
-        private bool HourOnCenter(int hours,int minutes)
+        private bool HourOnCenter(int hours, int minutes)
         {
             return hours == 6 || hours == 12;
         }

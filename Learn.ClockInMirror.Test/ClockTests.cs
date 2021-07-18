@@ -36,7 +36,7 @@ namespace Learn.ClockInMirror.Test
             Clock clock = new Clock();
 
             // Assert
-            Assert.AreEqual("05:25", clock.WhatIsTheTime("07:35"));
+            Assert.AreEqual("04:25", clock.WhatIsTheTime("07:35"));
             Assert.AreEqual("12:02", clock.WhatIsTheTime("11:58"));
 
             Assert.AreEqual("12:41", clock.WhatIsTheTime("11:19"));
