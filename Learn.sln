@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.ListFiltering", "Lear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.ListFiltering.Test", "Learn.ListFiltering.Test\Learn.ListFiltering.Test.csproj", "{65C18C97-D12B-4661-B295-94060AC83AC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.Kata", "List.Kata\Learn.Kata.csproj", "{A2112CB9-72F7-4E9A-91E7-DA078CB6E64A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.Kata.Test", "Learn.Kata.Test\Learn.Kata.Test.csproj", "{D8DA21AE-A35B-475C-8D8B-07EE7F40C7ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{65C18C97-D12B-4661-B295-94060AC83AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C18C97-D12B-4661-B295-94060AC83AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C18C97-D12B-4661-B295-94060AC83AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2112CB9-72F7-4E9A-91E7-DA078CB6E64A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2112CB9-72F7-4E9A-91E7-DA078CB6E64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2112CB9-72F7-4E9A-91E7-DA078CB6E64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2112CB9-72F7-4E9A-91E7-DA078CB6E64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DA21AE-A35B-475C-8D8B-07EE7F40C7ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DA21AE-A35B-475C-8D8B-07EE7F40C7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DA21AE-A35B-475C-8D8B-07EE7F40C7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DA21AE-A35B-475C-8D8B-07EE7F40C7ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
