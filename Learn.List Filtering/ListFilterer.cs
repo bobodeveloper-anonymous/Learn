@@ -8,7 +8,7 @@ namespace Learn.ListFiltering
     {
         public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
         {
-            return listOfItems.Where(c => c is int).Select(c => (int)(c)).ToList();
+            return listOfItems.OfType<int>();
         }
     }
 
