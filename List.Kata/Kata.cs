@@ -9,20 +9,16 @@ namespace Learn.Kata
         public static IEnumerable<T> UniqueInOrder<T>(IEnumerable<T> iterable)
         {
             if (iterable == null || iterable.Count() == 0)
-                return new List<T>();
-            
-            List<T> result = new List<T>();
-
-            result.Add(iterable.FirstOrDefault());
-            foreach(T x in iterable)
+                yield break;
+            T previous = default;
+            foreach (T next in iterable)
             {
-                if (!(result.LastOrDefault().Equals(x)))
+                if (!next.Equals(previous))
                 {
-                    result.Add(x);
+                    previous = next;
+                    yield return next;                    
                 }
-                
             }
-            return result;
         }
     }
 }
